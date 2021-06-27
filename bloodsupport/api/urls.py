@@ -4,6 +4,8 @@ from . import views
 urlpatterns = [
     path('',views.apiOverView,name="api-overview"),
     path('donor',views.DonorAdd,name="DonorAdd"),
-    path('getall',views.DonorGetAll,name="DonorGetAll")
+    path('getall',views.DonorGetAll,name="DonorGetAll"),
+    path('search',views.search,name="Search")
+
 
 ]
