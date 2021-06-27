@@ -13,6 +13,49 @@ bloodtype = [
     ("AB RhD negative (AB-)","AB-"),
 ]
 
+state = [
+
+    ("Andhra Pradesh" ,"Andhra Pradesh"),
+    ('Arunachal Pradesh','Arunachal Pradesh'),
+    ("Assam","Assam"),
+    ("Bihar","Bihar"),
+    ("Chhatisgarh","Chhatisgarh"),
+    ("Goa","Goa"),
+    ("Gujarat","Gujarat"),
+    ("Haryana","Haryana"),
+    ("Himachal Pradesh","Himachal Pradesh"),
+    ("Jharkhand","Jharkhand"),
+    ("Karnataka","Karnataka"),
+    ("Kerala","Kerala"),
+    ("Madhya Pradesh","Madhya Pradesh"),
+    ("Maharashtra","Maharashtra"),
+    ("Manipur","Manipur"),
+    ("Meghalaya","Meghalaya"),
+    ("Mizoram","Mizoram"),
+    ("Nagaland","Nagaland"),
+    ("Odisha","Odisha"),
+    ("Punjab","Punjab"),
+    ("Rajasthan","Rajasthan"),
+    ("Sikkim","Sikkim"),
+    ("Tamil Nadu","Tamil Nadu"),
+    ("Telangana","Telangana"),
+    ("Telangana","Telangana"),
+    ("Tripura","Tripura"),
+    ("Uttarakhand","Uttarakhand"),
+    ("Uttar Pradesh","Uttar Pradesh"),
+    ("West Bengal","West Bengal"),
+    ("Andaman & Nicobar Islands","Andaman & Nicobar Islands"),
+    ("Chandigarh","Chandigarh"),
+    ("Dadra & Nagar Haveli and Daman & Diu","Dadra & Nagar Haveli and Daman & Diu"),
+    ("Delhi","Delhi"),
+    ("Lakshadweep","Lakshadweep"),
+    ("Puducherry","Puducherry"),
+    ("Ladakh","Ladakh"),
+    ("Jammu & Kashmir","Jammu & Kashmir")
+
+]
+
+
 class Donor(models.Model):
     name        = models.CharField(max_length=200,default="anomalous")
     bloodgroup  = models.CharField(max_length=200,choices=bloodtype)
@@ -20,7 +63,7 @@ class Donor(models.Model):
                     MaxValueValidator(60),
                     MinValueValidator(18)
                 ])
-    state       = models.CharField(max_length=200)
+    state       = models.CharField(max_length=200,choices=state)
     city        = models.CharField(max_length=200)
  
 
