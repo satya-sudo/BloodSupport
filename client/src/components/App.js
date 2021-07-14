@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getAll} from '../actions';
+import {getAll,getSearched} from '../actions';
+
 
 class App extends React.Component{
     
@@ -9,6 +10,7 @@ class App extends React.Component{
     return(
         <div>maa
         <button onClick={()=>this.props.getAll()}>ds</button>
+        <button onClick={()=>this.props.getSearched({ params: {state:"Bihar"} })}>ds</button>
 
         </div>
     );
@@ -22,4 +24,4 @@ const mapStateToProps = (state) => {
 
 }
 
-export default connect(mapStateToProps,{getAll})(App);
+export default connect(mapStateToProps,{getAll,getSearched})(App);

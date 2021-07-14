@@ -10,3 +10,13 @@ export const getAll = () => async dispatch => {
 };
 
 
+export const getSearched = (params) => async dispatch => {
+
+    const response = await bloodSupportApi.get('/search',params);
+
+    dispatch(
+        {
+            type: "FETCH_SEARCHED",payload:response.data
+        }
+    )
+}
