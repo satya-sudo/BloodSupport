@@ -7,7 +7,7 @@ body {
 
 .navbar {
     min-height: 7rem;
-    background-color: #AA1111;
+    background-color: #db3a3a;
     margin-bottom: 5rem;
     font-size: 1.5rem;
 }
@@ -16,6 +16,12 @@ body {
 }
 
 .jumbotron {
-    background-color: #AA1111;
+    background-color: #db3a3a;
     margin-bottom: 5rem;
 }    
+
+.search_bar {
+    padding: 1.4rem;
+    background: #db3a3a;
+
+}

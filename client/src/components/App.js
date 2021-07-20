@@ -4,6 +4,7 @@ import {getAll,getSearched} from '../actions';
 
 import NavBar from './NavBar';
 import Jumbotron from './Jumbotron';
+import SearchBar from './Donors/SearchBar';
 
 class App extends React.Component{
     
@@ -14,7 +15,9 @@ class App extends React.Component{
             <NavBar />
         {/* <button onClick={()=>this.props.getAll()}>ds</button>
         <button onClick={()=>this.props.getSearched({ params: {state:"Bihar"} })}>ds</button> */}
-            <Jumbotron />
+            <Jumbotron id="landing" />
+            <SearchBar />
+            
         </div>
     );
     }
