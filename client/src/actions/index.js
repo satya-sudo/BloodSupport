@@ -10,13 +10,19 @@ export const getAll = () => async dispatch => {
 };
 
 
-export const getSearched = (params) => async dispatch => {
+export const getSearched = (params=null) => async dispatch => {
 
-    const response = await bloodSupportApi.get('/search',params);
+    let response;
+    if (params === null){
+        response = await bloodSupportApi.get('/getall');
+    } else {
+        response = await bloodSupportApi.get('/search',params);
+    }
+    
 
     dispatch(
         {
-            type: "FETCH_SEARCHED",payload:response.data
+            type: "FETCH_ALL",payload:response.data
         }
     )
 }

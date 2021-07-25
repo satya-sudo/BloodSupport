@@ -24,7 +24,24 @@ class Search extends  React.Component{
         this.setState({state: event.target.value});
     }
     handleSearch() {
-        this.props.getSearched({params:{state:this.state.state,bloodtype:this.state.bloodtype}});
+        let params = null;
+        if (this.state.state != null) {
+            params = {
+                state: this.state.state
+            }
+        }
+        if (this.state.bloodtype != null) {
+            params = {
+                ...params,bloodtype: this.state.bloodtype
+            }
+        }
+        console.log(params,"sdfkkkkkk");
+        if (params != null) {
+            this.props.getSearched({params})
+        } else {
+            this.props.getSearched()
+        }
+        
     }
 
 

@@ -17,7 +17,7 @@ class App extends React.Component{
         {/* <button onClick={()=>this.props.getAll()}>ds</button>
         <button onClick={()=>this.props.getSearched({ params: {state:"Bihar"} })}>ds</button> */}
             <Jumbotron id="landing" />
-            <SearchBar />
+            {/* <SearchBar /> */}
             <Lister />
             
         </div>
