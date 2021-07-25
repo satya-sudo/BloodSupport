@@ -1,24 +1,30 @@
-import render from 'dom-serializer';
-import { IsConstructor } from 'es-abstract';
 import React from 'react';
+import { connect } from 'react-redux';
+import { getAll } from '../../actions';
+import Listitem from './ListItem';
+import Table from './Table';
+class Lister extends React.Component{
 
-
-classa Lister extends React.Component{
-
-    Constructor(porps) {
-        super(props);
-        
-    }
+    componentDidMount() {
+        this.props.getAll();
+    };
+    
+    
+    
 
     render() {
-        return (
-            <div>
-
-            </div>
-        );
+        console.log(this.props.data,"sad");
+        return ( 
+            <Table data={this.props.data} />
+        )
     }
 
 }
 
+const mapSteteToProps = (state) => {
+    return {
+        data: Object.values(state.bloodSupport)
+    }
+}
 
-mapS
+export default connect(mapSteteToProps,{ getAll })(Lister);

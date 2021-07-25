@@ -4,6 +4,7 @@ import {Link} from 'react-scroll';
 const navBar = () => {
 
     return (
+        <div className="navbar_main">
         <nav className="navbar navbar-expand-md  navbar-light">
             <div className="container">
                 <Link className="navbar-brand" >Blood Support</Link>
@@ -28,6 +29,7 @@ const navBar = () => {
                 </div>
             </div>
         </nav>
+        </div>    
 
     );
 

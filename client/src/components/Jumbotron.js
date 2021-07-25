@@ -3,6 +3,7 @@ import React from 'react';
 const Jumbotron = (props) => {
 
     return(
+        <div className="jumbotron-main">
         <div id={props.id} className="container container-md" >
         <div className="jumbotron text-center" >
             <h1 className="display-3">Welcome To Blood Support</h1>
@@ -12,6 +13,7 @@ const Jumbotron = (props) => {
             <p className="lead">
                 <a className="btn btn-info btn-lg"  role="button">Become A Donor</a>
             </p>
+        </div>
         </div>
         </div>
 

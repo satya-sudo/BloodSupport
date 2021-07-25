@@ -4,15 +4,25 @@ body {
     padding: 0;
     color: white;
 }
+.navbar_main{
+    background-color: #db3a3a;
 
+}
+nav {
+    border-bottom: 5px white;
+}
 .navbar {
     min-height: 7rem;
     background-color: #db3a3a;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
     font-size: 1.5rem;
 }
 .navbar .navbar-brand {
     font-size: 1.7rem;
+}
+
+.jumbotron-main{
+    background-color: #db3a3a;
 }
 
 .jumbotron {
@@ -24,4 +34,8 @@ body {
     padding: 1.4rem;
     background: #db3a3a;
 
+}
+
+.table{
+    background-color: #db3a3a;
 }
