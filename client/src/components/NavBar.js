@@ -16,11 +16,11 @@ const navBar = () => {
                     <li className="nav-item">
                         <Link to="landing" spy={true} smooth={true} duration={500} className="nav-link" >Home</Link>
                     </li>
-                    <li  to="list" className="nav-item">
-                        <Link className="nav-link" >Donors</Link>
+                    <li  className="nav-item">
+                        <Link to="#donors" spy={true} smooth={true} duration={500} className="nav-link" >Donors</Link>
                     </li>
                     <li  className="nav-item">
-                        <Link className="nav-link" >Help</Link>
+                        <Link to="#help" spy={true} smooth={true} duration={500} className="nav-link" >Help</Link>
                     </li>
                     <li  className="nav-item">
                         <Link  className="nav-link" >Contact</Link>

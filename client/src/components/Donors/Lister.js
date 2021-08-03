@@ -53,8 +53,8 @@ class Lister extends React.Component{
     render() {
         console.log(this.props.data,"sad");
         return ( 
-            <div>
-                <div className="search_bar">
+            <div >
+                <div className="search_bar" id={this.props.id}>
                 <div className="container row-hl d-flex justify-content-around">
                     <div className="m-2">
                         <h2>Search for donors</h2>
