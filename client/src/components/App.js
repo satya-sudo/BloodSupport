@@ -1,15 +1,28 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getAll,getSearched} from '../actions';
+import {getAll,getSearched,addDonor} from '../actions';
 
 import NavBar from './NavBar';
 import Jumbotron from './Jumbotron';
-import SearchBar from './Donors/SearchBar';
+import RulesMain from './Rules/RulesMain';
+import AddDonorForm from './Donors/AddDonor';
+
 import Lister from './Donors/Lister';
 
-class App extends React.Component{
-    
 
+
+class App extends React.Component{
+
+
+    constructor(props){
+        super(props);
+        this.test = this.test.bind(this);
+
+    }
+    test (){
+        this.props.addDonor({name:"satyam"})
+    }
+    
     render() {
     return(
         <div>
@@ -17,8 +30,10 @@ class App extends React.Component{
         {/* <button onClick={()=>this.props.getAll()}>ds</button>
         <button onClick={()=>this.props.getSearched({ params: {state:"Bihar"} })}>ds</button> */}
             <Jumbotron id="landing" />
+            <RulesMain />
             {/* <SearchBar /> */}
             <Lister />
+            <AddDonorForm />
             
         </div>
     );
@@ -32,4 +47,4 @@ const mapStateToProps = (state) => {
 
 }
 
-export default connect(mapStateToProps,{getAll,getSearched})(App);
+export default connect(mapStateToProps,{getAll,getSearched,addDonor})(App);

@@ -27,7 +27,7 @@ nav {
 
 .jumbotron {
     background-color: #db3a3a;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
 }    
 
 .search_bar {
@@ -38,4 +38,23 @@ nav {
 
 .table{
     background-color: #db3a3a;
+}
+
+.RulesMain_main{
+    margin-top: 0px;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+
+}
+
+.RulesMain_main .text{
+    padding-bottom: 1.4rem;
+}
+
+.bg-redstone {
+    background-color: #db3a3a;
+}
+
+.bg-bluestone {
+    background-color: #3a8bdb;
 }

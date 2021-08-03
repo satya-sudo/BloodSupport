@@ -5,7 +5,7 @@ const supportReducer = (state = {},action) =>{
             return  _.mapKeys(action.payload,'id')
         case 'FETCH_SEARCH':
             console.log( _.mapKeys(action.payload,'id'))
-            return _.mapKeys(action.payload,'id')
+            return _.mapKeys(action.payload,'id')    
         default: 
             return state;
 
