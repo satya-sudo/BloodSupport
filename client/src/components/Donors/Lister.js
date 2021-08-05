@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { getSearched } from '../../actions';
 import Listitem from './ListItem';
 import Table from './Table';
-class Lister extends React.Component{
 
+
+class Lister extends React.Component{
 
     constructor(props)  {
         super(props);
@@ -54,7 +55,7 @@ class Lister extends React.Component{
         console.log(this.props.data,"sad");
         return ( 
             <div >
-                <div className="search_bar" id={this.props.id}>
+                <div className="search_bar" id={this.props.id} >
                 <div className="container row-hl d-flex justify-content-around">
                     <div className="m-2">
                         <h2>Search for donors</h2>

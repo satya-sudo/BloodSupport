@@ -11,7 +11,7 @@ const Jumbotron = (props) => {
             <hr className="my-2" />
             <p>Want to contribute to this nobel cause?</p>
             <p className="lead">
-                <a className="btn btn-info btn-lg"  role="button">Become A Donor</a>
+                <button className="btn btn-info btn-lg" onClick={props.handleToggle} role="button">Become A Donor</button>
             </p>
         </div>
         </div>

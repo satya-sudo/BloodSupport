@@ -5,7 +5,7 @@ import Card from './Card';
 const RulesMain = () => {
 
 
-    const data  = RulesData.map((data,index) => { console.log(data);return  (<Card key={index} className={ index%2 === 0 ? "  bg-redstone text-white" : "bg-bluestone text-white" } header={data.header} title={data.title} content={data.content} />)})
+    const data  = RulesData.map((data,index) => { return  (<Card key={index} className={ index%2 === 0 ? "  bg-redstone text-white" : "bg-bluestone text-white" } header={data.header} title={data.title} content={data.content} />)})
 
     return (
 
