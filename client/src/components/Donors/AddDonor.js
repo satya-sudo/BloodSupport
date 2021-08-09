@@ -4,6 +4,7 @@ import { addDonor } from '../../actions';
 import { connect } from 'react-redux';
 import { stateData,BloodTypeData } from '../../constants/ConstantsData';
 
+
 const stateFieldoptions  = stateData.map(state => {return  <option value={state}>{state}</option>})
 const bloodtypeFieldOptions = BloodTypeData.map(bloodType => {return <option value={bloodType}>{bloodType}</option>  })
 

@@ -1,13 +1,15 @@
 import { div } from 'prelude-ls';
 import React from 'react';
 import {Link} from 'react-scroll';
+import logo from '../assets/blood.png';
+
 const navBar = () => {
 
     return (
         <div className="navbar_main">
         <nav className="navbar navbar-expand-md  navbar-light">
             <div className="container">
-                <Link className="navbar-brand" >Blood Support</Link>
+                <Link className="navbar-brand" ><img src={logo} alt="Logo" width="60px" height="60px"/> Blood Support</Link>
                 <button  className="navbar-toggler" data-toggle="collapse" data-target="#navBar-Nav">
                 <span className="navbar-toggler-icon"></span>
                 </button>
@@ -17,10 +19,10 @@ const navBar = () => {
                         <Link to="landing" spy={true} smooth={true} duration={500} className="nav-link" >Home</Link>
                     </li>
                     <li  className="nav-item">
-                        <Link to="donors" spy={true} smooth={true} duration={500} className="nav-link" >Donors</Link>
+                        <Link to="donors" spy={true} smooth={true} duration={700} className="nav-link" >Donors</Link>
                     </li>
                     <li  className="nav-item">
-                        <Link to="#help" spy={true} smooth={true} duration={500} className="nav-link" >Help</Link>
+                        <Link to="#help" spy={true} smooth={true} duration={900} className="nav-link" >Help</Link>
                     </li>
                     <li  className="nav-item">
                         <Link  className="nav-link" >Contact</Link>

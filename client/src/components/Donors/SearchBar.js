@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getSearched } from '../../actions';
+import { stateData,BloodTypeData } from '../../constants/ConstantsData';
+
+
 
 class Search extends  React.Component{
     
@@ -57,7 +60,7 @@ class Search extends  React.Component{
                     <div className="form-group m-2 ">
                         <select className="form-control" id="bloodtype"value={this.state.bloodtype} onChange={this.handleBloodType}>
                             <option value={null}>bloodtype</option>
-                            <option value="B">B</option>
+                            {bloodtypeFieldOptions}
                         </select>
                     </div>
                     
@@ -65,7 +68,7 @@ class Search extends  React.Component{
 
                         <select className="form-control" id="state" value={this.state.state} onChange={this.handleState}>
                             <option value={null}>State</option>
-                            <option value="Bihar">B</option>
+                            {stateFieldoptions}
                         </select>
                     </div>
                     <button className="btn btn-info m-2" onClick={this.handleSearch}>Search</button>
