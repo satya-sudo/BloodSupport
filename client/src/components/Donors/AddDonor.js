@@ -15,15 +15,34 @@ const AddDonorForm = (props) => {
     <div className="Donorform_main">
     <div className="container text-center">
         <h3 className="display-5 py-4">Fill In Your Details And Contibute To The Noble Cause! </h3>
-    <Form onSubmit={(fromObj)=>{ console.log(fromObj),props.addDonor(fromObj)}}>
+    <Form onSubmit={(fromObj)=>{ console.log(fromObj),props.addDonor(fromObj)}} validate={(values) => {
+          const errors = {};
+          console.log("20",values);
+          if (!values.name) {
+            errors.name = "Required";
+          }
+          if (!values.age  || (values.age < 18 || values.age > 60) ){
+            errors.age = "Age must be between 18 and 60 to be able to donate blood";
+          }
+          if (!values.bloodgroup || values.bloodgroup === "bloodgroup") {
+            errors.bloodgroup = "Required";
+          } 
+          if (!values.state) {
+            errors.state = "Required";
+          }
+            
+          return errors;
+        }}>
         {({handleSubmit})=> (
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     
                     <Field name="name">
-                        {( {input}) => (
+                        {( {input,meta}) => (
+                            <div>
                             <input placeholder="name" className="form-control" type="text" {...input} />
-                            
+                            {meta.error && meta.touched && <span>{meta.error}</span>}
+                            </div>
                         )}
                     </Field>
                     <small className="form-text  text-info">Your name is optional.</small>
@@ -35,22 +54,42 @@ const AddDonorForm = (props) => {
                 </Field> */}
                 <div className="form-group">
                     <Field name="age">
-                        {( {input}) => (
+                        {( {input,meta}) => (
+                            <div>
                             <input className="form-control" placeholder="age" type="number" {...input} />
+                            {meta.error && meta.touched && <span>{meta.error}</span>}
+                            </div>
                         )}
                     </Field>
                 </div>
                 <div className="form-group">
                
                     <Field className="form-control" name="bloodgroup" component="select" placeholder="bloodgroup">
-                        <option >bloodgroup</option>
+                        {({input,meta})=>(
+                            <div>
+                                <select className="form-control" name="bloodgroup" {...input}>
+                                    <option >bloodgroup</option>
+                                    {bloodtypeFieldOptions}
+                                </select>
+                                {meta.error && meta.touched && <span>{meta.error}</span>}
+                            </div>
+                        )}
+                        {/* <option >bloodgroup</option>
                         {bloodtypeFieldOptions}
+                        {meta.error && meta.touched && <span>{meta.error}</span>} */}
                     </Field>
                 </div>
                 <div className="form-group">
                     <Field className="form-control" name="state" component="select" placeholder="state">
-                        <option >state</option>
-                        {stateFieldoptions}
+                        {({input,meta})=>(
+                            <div>
+                                <select className="form-control" name="state" {...input}>
+                                    <option >State</option>
+                                    {stateFieldoptions}
+                                </select>
+                                {meta.error && meta.touched && <span>{meta.error}</span>}
+                            </div>
+                        )}
                     </Field>
                 </div>
                 <div className="form-group">
