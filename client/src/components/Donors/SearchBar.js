@@ -1,7 +1,14 @@
+// not actually being used 
+
+
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { getSearched } from '../../actions';
 import { stateData,BloodTypeData } from '../../constants/ConstantsData';
+
+const stateFieldoptions  = stateData.map(state => {return  <option value={state}>{state}</option>})
+const bloodtypeFieldOptions = BloodTypeData.map(bloodType => {return <option value={bloodType}>{bloodType}</option>  })
 
 
 
@@ -60,7 +67,7 @@ class Search extends  React.Component{
                     <div className="form-group m-2 ">
                         <select className="form-control" id="bloodtype"value={this.state.bloodtype} onChange={this.handleBloodType}>
                             <option value={null}>bloodtype</option>
-                            {bloodtypeFieldOptions}
+                            { bloodtypeFieldOptions } 
                         </select>
                     </div>
                     
@@ -68,7 +75,7 @@ class Search extends  React.Component{
 
                         <select className="form-control" id="state" value={this.state.state} onChange={this.handleState}>
                             <option value={null}>State</option>
-                            {stateFieldoptions}
+                            { stateFieldoptions }
                         </select>
                     </div>
                     <button className="btn btn-info m-2" onClick={this.handleSearch}>Search</button>

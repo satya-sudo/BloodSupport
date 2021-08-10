@@ -5,6 +5,11 @@ import Listitem from './ListItem';
 import Table from './Table';
 
 
+import { stateData,BloodTypeData } from '../../constants/ConstantsData';
+
+const stateFieldoptions  = stateData.map(state => {return  <option value={state}>{state}</option>})
+const bloodtypeFieldOptions = BloodTypeData.map(bloodType => {return <option value={bloodType}>{bloodType}</option>  })
+
 class Lister extends React.Component{
 
     constructor(props)  {
@@ -64,7 +69,7 @@ class Lister extends React.Component{
                     <div className="form-group m-2 ">
                         <select className="form-control" id="bloodtype"value={this.state.bloodtype} onChange={this.handleBloodType}>
                             <option value={null}>bloodtype</option>
-                            <option value="B">B</option>
+                            { bloodtypeFieldOptions }
                         </select>
                     </div>
                     
@@ -72,7 +77,7 @@ class Lister extends React.Component{
 
                         <select className="form-control" id="state" value={this.state.state} onChange={this.handleState}>
                             <option value={null}>State</option>
-                            <option value="Bihar">B</option>
+                            { stateFieldoptions }
                         </select>
                     </div>
                     <button className="btn btn-info m-2" onClick={this.handleSearch}>Search</button>
