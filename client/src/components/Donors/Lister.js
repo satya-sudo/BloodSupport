@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getSearched } from '../../actions';
-import Listitem from './ListItem';
 import Table from './Table';
 
 
@@ -36,18 +35,18 @@ class Lister extends React.Component{
     }
     handleSearch() {
         let params = null;
-        if (this.state.state != null && this.state.state != "State") {
+        if (this.state.state !== null && this.state.state !== "State") {
             params = {
                 state: this.state.state
             }
         }
-        if (this.state.bloodtype != null) {
+        if (this.state.bloodtype !== null) {
             params = {
                 ...params,bloodtype: this.state.bloodtype
             }
         }
         console.log(params,"sdfkkkkkk");
-        if (params != null) {
+        if (params !== null) {
             this.props.getSearched({params})
         } else {
             this.props.getSearched()

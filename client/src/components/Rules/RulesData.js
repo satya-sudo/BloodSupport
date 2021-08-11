@@ -1,13 +1,13 @@
 const data = [
-    {header:"sa",title:"dsfsd",content:"asdasdasd"},
-    {header:"asdfdasf",title:"dsfasdfasdfdssd",content:"asdasdfdasfdasfdsfasdasd"},
-    {header:"asdfasd",title:"ddfdssfsd",content:"loremasdfsdf sd"},
-    {header:"asdfasd",title:"ddfdssfsd",content:"loremasdfsdf sd"},
-    {header:"asdfasd",title:"ddfdssfsd",content:"loremasdfsdf sd"},
-    {header:"asdfasd",title:"ddfdssfsd",content:"loremasdfsdf sd"},
-    {header:"asdfasd",title:"ddfdssfsd",content:"loremasdfsdf sd"},
-    {header:"asdfasd",title:"ddfdssfsd",content:"loremasdfsdf sd"},
-    {header:"asdfasd",title:"ddfdssfsd",content:"loremasdfsdf sd"}
+    {header:"sa",title:"Confidentiality",content:"Confidentiality refers to the obligation of health-care professionals and healthcare institutions not to disclose personal and sensitive information about their patients or blood donors to third parties. This duty has long been codified in the Hippocratic Oath and is still one of the core principles of medical ethics."},
+    {header:"asdfdasf",title:"Privacy",content:"Privacy refers to a person's right to not be asked about matters of a personal nature. Under the ethical principle of respect for a person's autonomy, health workers have an obligation to respect privacy. Therefore, blood donor counselling should be provided in a setting designed to ensure reasonable audio and visual privacy."},
+    {header:"asdfasd",title:"Informed consent",content:"Informed consent is a voluntary agreement given by the prospective donor to the donation process, including the donation of blood, the testing of blood for TTI and blood group serology and, if applicable, the use of blood for additional tests, quality assurance or research purposes (77,78,79). Informed consent is a process based on the ethical principles of autonomy and respect for the individual."},
+    {header:"asdfasd",title:"Quality Donation Standards",content:"You have the right to be assured that Bloodworks meets or exceeds all federal, state, and industry regulations and standards in the collection and handling of blood donations"},
+    {header:"asdfasd",title:"Information",content:"You have the right to be informed of the ways in which Bloodworks intends to use the blood it collects and to be assured that donations are used for their intended purposes."},
+    {header:"asdfasd",title:"Respect",content:"You have the right to be treated with courtesy and respect in all interactions with Bloodworks employees and volunteers"},
+    {header:"asdfasd",title:"Complaints",content:"You have a right to a review of alleged violations of your donor rights and to file a complaint with the Department of Health or other quality improvement, accreditation, or other certifying bodies if you have an unresolved complaint, donor safety, or quality concern."},
+    {header:"asdfasd",title:"How often can you donate blood",content:"The minimum time advised between two donations is 3 months. This gap helps blood regain the normal haemoglobin count"},
+    // {header:"asdfasd",title:"",content:"loremasdfsdf sd"}
 ];
 
 export default data;

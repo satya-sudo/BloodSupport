@@ -36,7 +36,7 @@ class App extends React.Component{
         console.log("34",this.state.donorToggle)
         if (this.state.donorToggle === true){
             console.log("sa")
-            return <AddDonorForm />
+            return <AddDonorForm  handleToggle={this.changeToggle} />
         };
     }
 
