@@ -83,7 +83,12 @@ class Lister extends React.Component{
                     </div>
                 </div>
             </div>
-            <Table data={this.props.data} />
+            <div className="bg-redstone">
+            <div className="container">
+                <Table data={this.props.data} />
+
+            </div>
+            </div>
             </div>
             
         )

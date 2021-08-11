@@ -15,7 +15,9 @@ const AddDonorForm = (props) => {
     <div className="Donorform_main">
     <div className="container text-center">
         <h3 className="display-5 py-4">Fill In Your Details And Contibute To The Noble Cause! </h3>
-        <Form onSubmit={(fromObj)=>{props.addDonor(fromObj),window.alert("Thank  you for Your contribultion in this nobal couse"),props.handleToggle()}} validate={(values) => {
+        <Form onSubmit={(formObj)=>{props.addDonor(formObj); window.alert("Thank  you for Your contribultion in this nobal couse");props.handleToggle(false)}} 
+            
+            validate={(values) => {
             const errors = {};
             if (!values.age  || (values.age < 18 || values.age > 60) ){
                 errors.age = "Age must be between 18 and 60 to be able to donate blood";
