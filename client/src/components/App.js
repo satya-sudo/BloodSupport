@@ -10,7 +10,8 @@ import AddDonorForm from './Donors/AddDonor';
 import Lister from './Donors/Lister';
 import Footer from './Footer';
 
-import { useTransition } from 'react-spring';
+import { useTransition,animated } from 'react-spring';
+
 
 
 
@@ -58,7 +59,7 @@ import { useTransition } from 'react-spring';
 //     );
 //     }
 // };
-
+{/* <AddDonorForm  handleToggle={setToggle} /> */}
 // const mapStateToProps = (state) => {
 //     return {
         
@@ -73,17 +74,29 @@ const App = () => {
 
     const [toggle,setToggle] = useState(false)
 
-    const transition =  useTransition(toggle,{});
+    // const transitions =  useTransition(toggle,{
+    //     from: {with:"0%"},
+    //     enter: {with:"100%"},
+    //     leave: {}
+    // });
 
     return (
         <div>
             <NavBar />
             <Jumbotron id="landing" handleToggle={setToggle} />
             
-            {toggle?<AddDonorForm  handleToggle={setToggle} /> : null}
-            <RulesMain id="help" />
+            {toggle?<AddDonorForm  handleToggle={setToggle} toggle={toggle}/> : null}
+            {/* {transition((style,item) => 
+                item ? <animated.AddDonorForm style={style} handleToggle={setToggle} /> : null 
+            
+            )} */}
+             {/* {transitions.map(({ item, style, key }) => {
+                
+                return item ? <animated.AddDonorForm style={style} handleToggle={setToggle} /> : ""
+            })} */}
+            <RulesMain id="rights" />
             <Lister id="donors" />
-            <Footer />
+            <Footer id="contact" />
             
         </div>
 

@@ -5,12 +5,13 @@ import insta from '../assets/insta.png';
 import linkedIn from '../assets/linkedin.png';
 
 const socialImages = [github,facebook,insta,linkedIn]
-const socialImagesLogos = socialImages.map((item) => {return ( <a href="#" className="mx-2"><img src={item} alt="Logo" width="20px" height="20px"/></a>)})
+const socialLinks = ["https://github.com/satya-sudo","www.facebook.com","https://www.instagram.com/satyam_shree_s22/","https://www.linkedin.com/in/satyam-shree-524208193/"]
+const socialImagesLogos = socialImages.map((item,index) => {return ( <a href={socialLinks[index]} className="mx-2"><img src={item} alt="Logo" width="20px" height="20px"/></a>)})
 
-const Footer = () =>{
+const Footer = ({id}) =>{
 
     return (
-        <div className="footer_main">
+        <div className="footer_main" id={id}>
             <div className="text-center text-white">
                 <h4 className="lead">
                     Made with ❤️ by Satyam shree

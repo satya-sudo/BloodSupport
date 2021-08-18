@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Form, Field } from 'react-final-form'
 import { addDonor } from '../../actions';
 import { connect } from 'react-redux';
 import { stateData,BloodTypeData } from '../../constants/ConstantsData';
+import Fade from 'react-reveal/Fade';
 
 
 const stateFieldoptions  = stateData.map(state => {return  <option value={state}>{state}</option>})
@@ -11,7 +12,10 @@ const bloodtypeFieldOptions = BloodTypeData.map(bloodType => {return <option val
 
 const AddDonorForm = (props) => {
 
+    // const [toggleman, settoggleman] = useState(props.toggle);
+    console.log(props.toggle);
     return (
+    <Fade top>    
     <div className="Donorform_main">
     <div className="container text-center">
         <h3 className="display-5 py-4">Fill In Your Details And Contibute To The Noble Cause! </h3>
@@ -108,6 +112,7 @@ const AddDonorForm = (props) => {
     </Form>
     </div>
     </div>
+    </Fade>
     );
 
 
