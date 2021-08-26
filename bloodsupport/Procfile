@@ -1,0 +1,1 @@
+web:  gunicorn bloodsupport.wsqi --log-file -
