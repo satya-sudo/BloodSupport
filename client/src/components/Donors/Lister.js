@@ -40,7 +40,7 @@ class Lister extends React.Component{
                 state: this.state.state
             }
         }
-        if (this.state.bloodtype !== null) {
+        if (this.state.bloodtype !== null && this.state.bloodtype !== "bloodtype") {
             params = {
                 ...params,bloodtype: this.state.bloodtype
             }

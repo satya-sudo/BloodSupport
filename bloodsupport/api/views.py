@@ -49,7 +49,7 @@ def DonorAdd(request):
     
 @api_view(['GET']) 
 def search(request):
-    bloodgroup  = request.GET.get('bloodgroup')
+    bloodgroup  = request.GET.get('bloodtype')
     state       = request.GET.get('state')
     city        = request.GET.get('city')
     

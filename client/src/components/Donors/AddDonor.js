@@ -32,7 +32,9 @@ const AddDonorForm = (props) => {
             if (!values.state) {
                 errors.state = "Please Specify Your State";
             }
-                
+            if (!values.phoneNumber || !values.phoneNumber.match(/^\+?1?\d{9,15}$/)) {
+                errors.phoneNumber = "Please enter a valid Phone Number"
+            }
             return errors;
             }}>
             {({handleSubmit})=> (
@@ -49,11 +51,16 @@ const AddDonorForm = (props) => {
                         </Field>
                         <small className="form-text  text-info">Your name is optional.</small>
                     </div>
-                    {/* <Field name="Number">
-                        {( {input}) => (
-                            <input placeholder="name" type="text" {...input} />
-                        )}
-                    </Field> */}
+                    <div className="form-group">
+                        <Field name="phoneNumber">
+                            {( {input,meta}) => (
+                                <div>
+                                <input placeholder="phoneNumber" className="form-control" type="number"  name="phoneNumber" {...input} />
+                                {meta.error && meta.touched && <small className="form-text  text-danger">{meta.error}</small>}
+                                </div>
+                            )}
+                        </Field>
+                    </div>    
                     <div className="form-group">
                         <Field name="age">
                             {( {input,meta}) => (

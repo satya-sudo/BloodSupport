@@ -65,7 +65,7 @@ class Donor(models.Model):
                 ])
     state       = models.CharField(max_length=200,choices=state)
     city        = models.CharField(max_length=200)
-    phoneNumber = models.IntegerField(validators=[phone_regex], max_length=14, blank=True)
+    phoneNumber = models.IntegerField(validators=[phone_regex], blank=True,null=True)
  
 
     def __str__(self):

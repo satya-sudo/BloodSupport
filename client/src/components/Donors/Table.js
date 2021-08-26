@@ -7,10 +7,11 @@ const Table = (props) => {
         <table class="table ">
             <thead>
                 <tr>
-                    <th>name</th>
-                    <th>bloodgroup</th>
-                    <th>state</th>
-                    <th>city</th>
+                    <th>Name</th>
+                    <th>Bloodgroup</th>
+                    <th>Phone No.</th>
+                    <th>State</th>
+                    <th>City</th>
 
                 </tr>
             </thead>
